@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="shortcut icon" type="image/png" href="/logo.png" />
     @viteReactRefresh
-    @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
+    @vite(['resources/js/app.jsx'])
     @inertiaHead
   </head>
   <body class="font-sans antialiased text-[#191c1d] bg-[#f8f9fa]">

@@ -25,6 +25,7 @@ export default function Navbar() {
     { path: '/qui-sommes-nous', label: 'Qui Sommes-Nous' },
     { path: '/nos-programmes', label: 'Nos Programmes' },
     { path: '/impact-recits', label: 'Impact & Récits' },
+    { path: '/galerie', label: 'Galerie Photo' },
     { path: '/partenaires', label: 'Partenaires' },
     { path: '/contact', label: 'Contact & Réservations' },
   ];

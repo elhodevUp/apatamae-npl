@@ -34,6 +34,10 @@ Route::get('/partenaires', function () {
     return Inertia::render('PartnersPage');
 })->name('partners');
 
+Route::get('/galerie', function () {
+    return Inertia::render('GalleryPage');
+})->name('gallery');
+
 Route::get('/contact', function () {
     return Inertia::render('ContactPage');
 })->name('contact');

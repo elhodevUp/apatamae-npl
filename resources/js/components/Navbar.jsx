@@ -23,10 +23,11 @@ export default function Navbar() {
   const navLinks = [
     { path: '/', label: 'Accueil' },
     { path: '/qui-sommes-nous', label: 'Qui Sommes-Nous' },
-    { path: '/nos-programmes', label: 'Nos Programmes' },
+    { path: '/nos-programmes', label: 'Programmes' },
     { path: '/impact-recits', label: 'Impact & Récits' },
+    { path: '/galerie', label: 'Galeries' },
     { path: '/partenaires', label: 'Partenaires' },
-    { path: '/contact', label: 'Contact & Réservations' },
+    { path: '/contact', label: 'Contacts' },
   ];
 
   const isActiveRoute = (path) => {
@@ -62,7 +63,7 @@ export default function Navbar() {
                 <span className="text-[#012d1d]">E</span>
               </span>
               <span className="text-[10px] font-semibold text-[#717973] uppercase tracking-wider block mt-1">
-                Agence Institutional
+                Agence Institutional & Dévs Durable
               </span>
             </div>
           </Link>
@@ -73,11 +74,10 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 href={link.path}
-                className={`px-4 py-2 rounded-full text-xs font-semibold tracking-wide transition-all ${
-                  isActiveRoute(link.path)
-                    ? 'bg-[#012d1d] text-white shadow-md'
-                    : 'text-[#414844] hover:text-[#012d1d] hover:bg-white/60'
-                }`}
+                className={`px-4 py-2 rounded-full text-xs font-semibold tracking-wide transition-all ${isActiveRoute(link.path)
+                  ? 'bg-[#012d1d] text-white shadow-md'
+                  : 'text-[#414844] hover:text-[#012d1d] hover:bg-white/60'
+                  }`}
               >
                 {link.label}
               </Link>
@@ -118,11 +118,10 @@ export default function Navbar() {
                 key={link.path}
                 href={link.path}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`text-left px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
-                  isActiveRoute(link.path)
-                    ? 'bg-[#012d1d] text-white'
-                    : 'text-[#191c1d] hover:bg-[#edeeef]'
-                }`}
+                className={`text-left px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${isActiveRoute(link.path)
+                  ? 'bg-[#012d1d] text-white'
+                  : 'text-[#191c1d] hover:bg-[#edeeef]'
+                  }`}
               >
                 {link.label}
               </Link>

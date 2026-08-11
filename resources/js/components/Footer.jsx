@@ -141,6 +141,7 @@ export default function Footer() {
               <li><Link href="/qui-sommes-nous" className="hover:text-white transition-colors">Qui Sommes-Nous</Link></li>
               <li><Link href="/nos-programmes" className="hover:text-white transition-colors">Nos Programmes</Link></li>
               <li><Link href="/impact-recits" className="hover:text-white transition-colors">Impact & Récits</Link></li>
+              <li><Link href="/galerie" className="hover:text-white transition-colors">Galerie Photo</Link></li>
               <li><Link href="/partenaires" className="hover:text-white transition-colors">Partenaires</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Réservations & Contact</Link></li>
             </ul>
