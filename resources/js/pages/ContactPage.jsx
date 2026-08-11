@@ -69,8 +69,7 @@ export default function ContactPage() {
   };
 
   return (
-    <Layout>
-      <div className="pt-24 pb-20 bg-[#f8f9fa] text-[#191c1d]">
+    <div className="pt-24 pb-20 bg-[#f8f9fa] text-[#191c1d]">
 
       {/* ============================================================ */}
       {/* 1. HERO BANNER */}
@@ -768,6 +767,5 @@ export default function ContactPage() {
       </section>
 
     </div>
-    </Layout>
   );
 }

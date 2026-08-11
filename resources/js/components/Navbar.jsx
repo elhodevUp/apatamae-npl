@@ -90,7 +90,7 @@ export default function Navbar() {
               href="/contact"
               className="btn btn-sm bg-[#012d1d] hover:bg-[#1b4332] text-white font-semibold border-none rounded-full px-5 shadow-lg shadow-[#012d1d]/15 hover:shadow-xl transition-all duration-300 gap-2 text-xs uppercase tracking-wider flex items-center"
             >
-              <span>Rejoindre l'Action</span>
+              <span>Nous Rejoindre</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-[#daa520]" />
             </Link>
           </div>

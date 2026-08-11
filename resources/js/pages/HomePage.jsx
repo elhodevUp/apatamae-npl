@@ -70,8 +70,7 @@ export default function HomePage() {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
 
   return (
-    <Layout>
-      <div className="bg-[#f8f9fa] text-[#0A2540] selection:bg-[#1B4332]/20 overflow-x-hidden">
+    <div className="bg-[#f8f9fa] text-[#0A2540] selection:bg-[#1B4332]/20 overflow-x-hidden">
 
         {/* ============================================================ */}
         {/* 1. HERO SLIDER SECTION WITH ANIMATED SLIDE CROSS-FADE */}
@@ -568,6 +567,5 @@ export default function HomePage() {
         </div>
 
       </div>
-    </Layout>
   );
 }

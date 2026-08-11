@@ -39,8 +39,7 @@ export default function AboutPage() {
   };
 
   return (
-    <Layout>
-      <div className="pt-24 pb-20 bg-[#f8f9fa] text-[#191c1d] selection:bg-[#1b4332]/20 overflow-x-hidden">
+    <div className="pt-24 pb-20 bg-[#f8f9fa] text-[#191c1d] selection:bg-[#1b4332]/20 overflow-x-hidden">
       
       {/* ============================================================ */}
       {/* 1. HERO SECTION */}
@@ -418,6 +417,5 @@ export default function AboutPage() {
       )}
 
     </div>
-    </Layout>
   );
 }

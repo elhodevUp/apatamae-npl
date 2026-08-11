@@ -6,8 +6,7 @@ import MosaicGallery from '../components/MosaicGallery';
 
 export default function GalleryPage() {
   return (
-    <Layout>
-      <div className="pt-24 pb-20 bg-[#f8f9fa] text-[#191c1d]">
+    <div className="pt-24 pb-20 bg-[#f8f9fa] text-[#191c1d]">
         
         {/* Hero Banner */}
         <section className="bg-gradient-to-r from-[#012d1d] via-[#1b4332] to-[#396093] text-white py-16">
@@ -55,6 +54,5 @@ export default function GalleryPage() {
         </section>
 
       </div>
-    </Layout>
   );
 }

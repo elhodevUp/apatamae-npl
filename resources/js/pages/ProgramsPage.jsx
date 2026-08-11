@@ -123,8 +123,7 @@ export default function ProgramsPage() {
   ];
 
   return (
-    <Layout>
-      <div className="pt-28 pb-20 bg-[#f8f9fa] text-[#0A2540] selection:bg-[#1B4332]/20">
+    <div className="pt-28 pb-20 bg-[#f8f9fa] text-[#0A2540] selection:bg-[#1B4332]/20">
       
       {/* ============================================================ */}
       {/* 1. HERO SECTION */}
@@ -299,6 +298,5 @@ export default function ProgramsPage() {
       )}
 
     </div>
-    </Layout>
   );
 }
