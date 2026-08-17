@@ -1,52 +1,63 @@
 import React from 'react';
 import { Link } from '@inertiajs/react';
-import { Mail, Phone, MapPin, Send, ArrowUpRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import NoiseCanvas from './NoiseCanvas';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#012d1d] text-[#ffffff] pt-16 pb-8 border-t border-white/10" id="official-apatame-footer">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 mb-12">
+    <footer className="relative bg-[#f8f9fa] text-[#0A2540] pt-20 pb-10 border-t border-[#c1c8c2]/30 overflow-hidden" id="official-apatame-footer">
+      
+      {/* Background Noise identical to the Header */}
+      <NoiseCanvas className="absolute inset-0 w-full h-full z-0 opacity-60 pointer-events-none" />
+      
+      {/* Background Glow Blobs for depth */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-[#1B4332]/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-[5%] left-[-10%] w-[600px] h-[600px] bg-[#0A2540]/5 rounded-full blur-[100px]" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 mb-16">
 
           {/* Col 1: Brand & Presentation */}
-          <div className="md:col-span-4 space-y-4">
+          <div className="md:col-span-4 space-y-5">
             <div className="flex items-center gap-3">
               <img
-                src="/logo.png"
+                src="/logo1.png"
                 alt="APATAM@E Logo"
-                className="h-12 w-auto object-contain bg-white/10 p-1.5 rounded-xl border border-white/20"
+                className="h-12 w-auto object-contain bg-white/50 p-1.5 rounded-xl border border-[#c1c8c2]/40 shadow-sm"
               />
               <div>
                 <span className="font-headline font-extrabold text-xl tracking-tight block leading-none">
-                  <span className="text-[#a0c6ff]">APATAM</span>
+                  <span className="text-[#396093]">APATAM</span>
                   <span className="text-[#daa520]">@</span>
-                  <span className="text-[#a5d0b9]">E</span>
+                  <span className="text-[#1B4332]">E</span>
                 </span>
-                <span className="text-[10px] font-medium text-white/60 uppercase tracking-wider block mt-1">
-                  Antigravity Institutional & Development
+                <span className="font-body text-[10px] font-bold text-[#414844] uppercase tracking-wider block mt-1">
+                  Institutional & Development
                 </span>
               </div>
             </div>
 
-            <p className="text-xs text-white/70 leading-relaxed max-w-sm">
+            <p className="font-body text-sm text-[#414844] leading-relaxed max-w-sm">
               Former, accompagner et innover pour des territoires durables. Une initiative citoyenne pour la gouvernance inclusive et le développement local au Sénégal.
             </p>
 
-            <div className="pt-2 text-xs text-[#daa520] font-semibold flex items-center gap-2">
+            <div className="pt-2 font-body text-xs text-[#daa520] font-bold flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#daa520] animate-ping" />
               <span>Thiès • Dakar • Saly • Podor • Régions</span>
             </div>
 
             {/* Social Media Links */}
-            <div className="pt-3 space-y-2">
-              <span className="text-[11px] font-bold text-white/80 uppercase tracking-wider block">Suivez-nous :</span>
+            <div className="pt-4 space-y-3">
+              <span className="font-headline text-[11px] font-bold text-[#0A2540] uppercase tracking-widest block">Suivez-nous :</span>
               <div className="flex items-center gap-3">
                 <a
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook APATAM@E"
-                  className="w-8 h-8 rounded-xl bg-white/10 hover:bg-[#1877F2] hover:text-white text-white flex items-center justify-center transition-all duration-300 shadow-md hover:scale-110"
+                  className="w-10 h-10 rounded-xl bg-white border border-[#c1c8c2]/50 hover:bg-[#1877F2] hover:border-[#1877F2] hover:text-white text-[#0A2540] flex items-center justify-center transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1"
                   title="Facebook"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -59,7 +70,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram APATAM@E"
-                  className="w-8 h-8 rounded-xl bg-white/10 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] text-white flex items-center justify-center transition-all duration-300 shadow-md hover:scale-110"
+                  className="w-10 h-10 rounded-xl bg-white border border-[#c1c8c2]/50 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:border-transparent hover:text-white text-[#0A2540] flex items-center justify-center transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1"
                   title="Instagram"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -72,7 +83,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="WhatsApp APATAM@E"
-                  className="w-8 h-8 rounded-xl bg-white/10 hover:bg-[#25D366] hover:text-white text-white flex items-center justify-center transition-all duration-300 shadow-md hover:scale-110"
+                  className="w-10 h-10 rounded-xl bg-white border border-[#c1c8c2]/50 hover:bg-[#25D366] hover:border-[#25D366] hover:text-white text-[#0A2540] flex items-center justify-center transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1"
                   title="WhatsApp (+221 71 055 31 31)"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -85,7 +96,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="X (Twitter) APATAM@E"
-                  className="w-8 h-8 rounded-xl bg-white/10 hover:bg-black hover:text-white text-white flex items-center justify-center transition-all duration-300 shadow-md hover:scale-110"
+                  className="w-10 h-10 rounded-xl bg-white border border-[#c1c8c2]/50 hover:bg-black hover:border-black hover:text-white text-[#0A2540] flex items-center justify-center transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1"
                   title="X (Twitter)"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -97,76 +108,83 @@ export default function Footer() {
           </div>
 
           {/* Col 2: Direct Contact & Coordinates */}
-          <div className="md:col-span-3 space-y-3">
-            <h4 className="font-headline font-bold text-xs uppercase tracking-wider text-white/90 mb-3 border-b border-white/10 pb-2">
-              Coordonnées Officielles
+          <div className="md:col-span-3 space-y-4">
+            <h4 className="font-headline font-bold text-sm uppercase tracking-widest text-[#0A2540] mb-4 border-b border-[#0A2540]/10 pb-3">
+              Coordonnées
             </h4>
-            <ul className="space-y-2.5 text-xs text-white/80">
-              <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#daa520] shrink-0 mt-0.5" />
-                <div>
+            <ul className="space-y-3 font-body text-sm text-[#414844]">
+              <li className="flex items-start gap-3 group">
+                <div className="w-8 h-8 rounded-full bg-[#1B4332]/5 flex items-center justify-center shrink-0 group-hover:bg-[#1B4332] transition-colors">
+                  <MapPin className="w-4 h-4 text-[#1B4332] group-hover:text-white transition-colors" />
+                </div>
+                <div className="pt-1.5">
                   <span className="block"><strong>Thiès :</strong> ZAC NORD Thiès Nº2688</span>
-                  <span className="block mt-0.5"><strong>Dakar :</strong> Cité Promocap nº158</span>
+                  <span className="block mt-1"><strong>Dakar :</strong> Cité Promocap nº158</span>
                 </div>
               </li>
-              <li className="flex items-start gap-2.5">
-                <Mail className="w-4 h-4 text-[#a0c6ff] shrink-0 mt-0.5" />
-                <div>
-                  <a href="mailto:contact@apatame.com" className="hover:text-[#daa520] block transition-colors">
+              <li className="flex items-start gap-3 group">
+                <div className="w-8 h-8 rounded-full bg-[#daa520]/5 flex items-center justify-center shrink-0 group-hover:bg-[#daa520] transition-colors">
+                  <Mail className="w-4 h-4 text-[#daa520] group-hover:text-white transition-colors" />
+                </div>
+                <div className="pt-1.5">
+                  <a href="mailto:contact@apatame.com" className="hover:text-[#daa520] block transition-colors font-medium">
                     contact@apatame.org
                   </a>
-                  <a href="mailto:secretariat@apatame.org" className="hover:text-[#daa520] block text-white/60 text-[11px] transition-colors">
+                  <a href="mailto:secretariat@apatame.org" className="hover:text-[#daa520] block text-[13px] transition-colors mt-0.5">
                     secretariat@apatame.org
                   </a>
                 </div>
               </li>
-              <li className="flex items-start gap-2.5">
-                <Phone className="w-4 h-4 text-[#a5d0b9] shrink-0 mt-0.5" />
-                <div>
-                  <span className="block"><a href="tel:+221710553131" className="hover:text-[#daa520]">71 055 31 31</a></span>
-                  <span className="block"><a href="tel:+221776080769" className="hover:text-[#daa520]">77 608 07 69</a></span>
-                  <span className="block"><a href="tel:+221339040895" className="hover:text-[#daa520]">33 904 08 95</a></span>
+              <li className="flex items-start gap-3 group">
+                <div className="w-8 h-8 rounded-full bg-[#396093]/5 flex items-center justify-center shrink-0 group-hover:bg-[#396093] transition-colors">
+                  <Phone className="w-4 h-4 text-[#396093] group-hover:text-white transition-colors" />
+                </div>
+                <div className="pt-1.5">
+                  <span className="block"><a href="tel:+221710553131" className="hover:text-[#396093] font-medium transition-colors">71 055 31 31</a></span>
+                  <span className="block mt-0.5"><a href="tel:+221776080769" className="hover:text-[#396093] transition-colors">77 608 07 69</a></span>
+                  <span className="block mt-0.5"><a href="tel:+221339040895" className="hover:text-[#396093] transition-colors">33 904 08 95</a></span>
                 </div>
               </li>
             </ul>
           </div>
 
           {/* Col 3: Navigation Links */}
-          <div className="md:col-span-2 space-y-3">
-            <h4 className="font-headline font-bold text-xs uppercase tracking-wider text-white/90 mb-3 border-b border-white/10 pb-2">
+          <div className="md:col-span-2 space-y-4">
+            <h4 className="font-headline font-bold text-sm uppercase tracking-widest text-[#0A2540] mb-4 border-b border-[#0A2540]/10 pb-3">
               Navigation
             </h4>
-            <ul className="space-y-2 text-xs text-white/70">
-              <li><Link href="/" className="hover:text-white transition-colors">Accueil</Link></li>
-              <li><Link href="/qui-sommes-nous" className="hover:text-white transition-colors">Qui Sommes-Nous</Link></li>
-              <li><Link href="/nos-programmes" className="hover:text-white transition-colors">Nos Programmes</Link></li>
-              <li><Link href="/impact-recits" className="hover:text-white transition-colors">Impact & Récits</Link></li>
-              <li><Link href="/galerie" className="hover:text-white transition-colors">Galerie Photo</Link></li>
-              <li><Link href="/partenaires" className="hover:text-white transition-colors">Partenaires</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">Réservations & Contact</Link></li>
+            <ul className="space-y-2.5 font-body text-sm font-medium text-[#414844]">
+              <li><Link href="/" className="hover:text-[#1B4332] hover:translate-x-1 inline-block transition-transform">Accueil</Link></li>
+              <li><Link href="/qui-sommes-nous" className="hover:text-[#1B4332] hover:translate-x-1 inline-block transition-transform">Qui Sommes-Nous</Link></li>
+              <li><Link href="/nos-programmes" className="hover:text-[#1B4332] hover:translate-x-1 inline-block transition-transform">Nos Programmes</Link></li>
+              <li><Link href="/impact-recits" className="hover:text-[#1B4332] hover:translate-x-1 inline-block transition-transform">Impact & Récits</Link></li>
+              <li><Link href="/galerie" className="hover:text-[#1B4332] hover:translate-x-1 inline-block transition-transform">Galerie Photo</Link></li>
+              <li><Link href="/partenaires" className="hover:text-[#1B4332] hover:translate-x-1 inline-block transition-transform">Partenaires</Link></li>
+              <li><Link href="/contact" className="hover:text-[#1B4332] hover:translate-x-1 inline-block transition-transform">Réservations & Contact</Link></li>
             </ul>
           </div>
 
           {/* Col 4: Newsletter */}
-          <div className="md:col-span-3 space-y-3">
-            <h4 className="font-headline font-bold text-xs uppercase tracking-wider text-white/90 mb-3 border-b border-white/10 pb-2">
+          <div className="md:col-span-3 space-y-4">
+            <h4 className="font-headline font-bold text-sm uppercase tracking-widest text-[#0A2540] mb-4 border-b border-[#0A2540]/10 pb-3">
               Lettre d'Information
             </h4>
-            <p className="text-xs text-white/70">
+            <p className="font-body text-sm text-[#414844] mb-4">
               Recevez nos actualités, notes d'impact et publications territoriales.
             </p>
 
-            <form onSubmit={(e) => e.preventDefault()} className="flex items-center gap-2 pt-1">
+            <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-3">
               <input
                 type="email"
                 placeholder="votre.email@domaine.com"
-                className="input input-sm w-full bg-white/10 border-white/20 focus:border-[#daa520] text-white placeholder:text-white/40 text-xs rounded-xl"
+                className="w-full bg-white border border-[#c1c8c2] focus:border-[#1B4332] focus:ring-1 focus:ring-[#1B4332] text-[#0A2540] placeholder:text-[#414844]/60 text-sm rounded-xl px-4 py-3 outline-none transition-all"
               />
               <button
                 type="submit"
-                className="btn btn-sm bg-[#daa520] hover:bg-[#b8860b] text-[#012d1d] border-none rounded-xl text-xs font-bold shrink-0"
+                className="w-full bg-[#1B4332] hover:bg-[#1B4332]/90 text-white rounded-xl text-sm font-bold px-4 py-3 flex items-center justify-center gap-2 shadow-sm transition-colors"
               >
-                <Send className="w-3.5 h-3.5" />
+                <span>S'inscrire</span>
+                <Send className="w-4 h-4" />
               </button>
             </form>
           </div>
@@ -174,17 +192,17 @@ export default function Footer() {
         </div>
 
         {/* Bottom Rights */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-white/50 gap-4">
+        <div className="pt-8 border-t border-[#c1c8c2]/30 flex flex-col sm:flex-row items-center justify-between text-xs font-body font-medium text-[#414844] gap-4">
           <div>
-            © 2026 APATAM@E Institutional. Tous droits réservés. Présidente Fondatrice : Adama Mbengue.
+            © 2026 APATAM@E Institutional. Tous droits réservés.
           </div>
 
-          <div className="flex items-center gap-4">
-            <Link href="/" className="hover:text-white">Mentions Légales</Link>
-            <span>•</span>
-            <Link href="/" className="hover:text-white">Politique de Confidentialité</Link>
-            <span>•</span>
-            <Link href="/contact" className="hover:text-white">Espaces & Chambres d'Hôtes</Link>
+          <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2">
+            <Link href="/" className="hover:text-[#1B4332]">Mentions Légales</Link>
+            <span className="hidden sm:inline text-[#c1c8c2]">•</span>
+            <Link href="/" className="hover:text-[#1B4332]">Politique de Confidentialité</Link>
+            <span className="hidden sm:inline text-[#c1c8c2]">•</span>
+            <Link href="/contact" className="hover:text-[#1B4332]">Espaces & Chambres d'Hôtes</Link>
           </div>
         </div>
 

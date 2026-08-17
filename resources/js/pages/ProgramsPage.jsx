@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { 
   ArrowRight, Building, Rocket, Sparkles, Sprout, GraduationCap, 
-  Users, ShieldCheck, CheckCircle2, HeartHandshake, History, BedDouble 
+  Users, ShieldCheck, CheckCircle2, HeartHandshake, History, BedDouble, MoveRight
 } from 'lucide-react';
 import { Link, router } from '@inertiajs/react';
 import Layout from '../Layouts/Layout';
@@ -19,8 +19,8 @@ export default function ProgramsPage() {
       description: "Réduire les fractures éducatives par des méthodes innovantes et inclusives, favorisant l'accès des filles aux filières d'excellence et aux filières scientifiques.",
       image: "/images/professional_photography_of_a_modern_classroom_in_senegal_with_young_girls_and_screen.png",
       tags: ["#ÉducationPourTous", "#STEM", "#Inclusion"],
-      badgeColor: "bg-[#a0c6ff] text-[#2a5284]",
-      textColor: "text-[#396093]",
+      badgeColor: "bg-[#0A2540] text-white",
+      textColor: "text-[#0A2540]",
       features: [
         "Bourses d'études et kits pédagogiques",
         "Ateliers de mentorat scientifique",
@@ -37,8 +37,8 @@ export default function ProgramsPage() {
       description: "Former la prochaine génération de décideurs à travers des programmes de mentorat et de renforcement des capacités citoyennes et professionnelles.",
       image: "/images/inspiring_portrait_of_a_young_west_african_woman_leader_speaking_at_a_community_screen.png",
       tags: ["#LeadershipFéminin", "#Jeunesse", "#Autonomisation"],
-      badgeColor: "bg-[#4e3800] text-[#ffdea0]",
-      textColor: "text-[#D97706]",
+      badgeColor: "bg-[#daa520] text-white",
+      textColor: "text-[#daa520]",
       features: [
         "Incubateur de leadership territorial",
         "Parcours d'éloquence et négociation",
@@ -55,7 +55,7 @@ export default function ProgramsPage() {
       description: "Accompagner les communautés rurales dans l'adaptation aux changements climatiques et la valorisation durable des filières agricoles locales.",
       image: "/images/cinematic_photography_of_a_sustainable_agricultural_project_in_rural_senegal_screen.png",
       tags: ["#Climat", "#AgricultureDurable", "#Terroirs"],
-      badgeColor: "bg-[#1b4332] text-[#86af99]",
+      badgeColor: "bg-[#1B4332] text-white",
       textColor: "text-[#1B4332]",
       features: [
         "Irrigation solaire haute efficacité",
@@ -73,8 +73,8 @@ export default function ProgramsPage() {
       description: "Transformer les données de terrain en leviers de plaidoyer pour des politiques publiques plus justes, inclusives et plus efficaces.",
       image: "/images/a_clean_institutional_scene_of_researchers_analyzing_data_and_documents_in_a_screen.png",
       tags: ["#Plaidoyer", "#RechercheAction", "#Gouvernance"],
-      badgeColor: "bg-[#001c3a] text-[#d4e3ff]",
-      textColor: "text-[#396093]",
+      badgeColor: "bg-[#0A2540] text-white",
+      textColor: "text-[#0A2540]",
       features: [
         "Rapports annuels de gouvernance territoriale",
         "Baromètre de satisfaction citoyenne",
@@ -91,8 +91,8 @@ export default function ProgramsPage() {
       description: "Prévention des conflits, médiation communautaire, renforcement du tissu social et consolidation de la sécurité citoyenne dans les zones frontalières et urbaines.",
       image: "/images/professional_high_quality_photography_of_a_senegalese_community_gathering_soft_screen.png",
       tags: ["#PaixEtSécurité", "#CohésionSociale", "#Médiation"],
-      badgeColor: "bg-[#012d1d] text-[#a5d0b9]",
-      textColor: "text-[#012d1d]",
+      badgeColor: "bg-[#1B4332] text-white",
+      textColor: "text-[#1B4332]",
       features: [
         "Comités locaux de paix et médiation",
         "Observatoire de prévention des conflits",
@@ -105,12 +105,12 @@ export default function ProgramsPage() {
     {
       id: '06',
       num: '06',
-      title: "Dialogue Intergénérationnel & Transmission des Savoirs (Aînés & Jeunes)",
+      title: "Dialogue Intergénérationnel & Transmission des Savoirs",
       description: "Sessions immersives de partage d'expériences entre les aînés dépositaires de sagesse et les jeunes générations, alliant savoirs endogènes et prospective.",
       image: "/images/high_quality_artistic_photography_of_senegalese_nature_and_local_citizens_screen.png",
       tags: ["#AînésEtJeunes", "#Transmission", "#SavoirsEndogènes"],
-      badgeColor: "bg-[#4e3800] text-[#ffdea0]",
-      textColor: "text-[#D97706]",
+      badgeColor: "bg-[#daa520] text-white",
+      textColor: "text-[#daa520]",
       features: [
         "Rencontres et cercles sous l'Apatam",
         "Recueil des récits de vie et savoir-faire",
@@ -123,20 +123,20 @@ export default function ProgramsPage() {
   ];
 
   return (
-    <div className="pt-28 pb-20 bg-[#f8f9fa] text-[#0A2540] selection:bg-[#1B4332]/20">
+    <div className="pt-[72px] pb-20 bg-[#f8f9fa] text-[#0A2540] selection:bg-[#1B4332]/20">
       
       {/* ============================================================ */}
       {/* 1. HERO SECTION */}
       {/* ============================================================ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8 mb-20 relative overflow-visible">
+      <section className="max-w-7xl mx-auto px-4 sm:px-8 mb-20 pt-16 relative overflow-visible">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           
           <div className="z-10 space-y-6">
-            <span className="text-[#396093] font-bold tracking-[0.2em] uppercase text-xs block">
+            <span className="text-[#daa520] font-bold tracking-[0.2em] uppercase text-xs block">
               Impact & Transformation
             </span>
             
-            <h1 className="font-headline font-extrabold text-4xl sm:text-5xl text-[#012d1d] leading-tight">
+            <h1 className="font-headline font-extrabold text-3xl sm:text-4xl text-[#0A2540] leading-tight">
               Nos Programmes & <br />
               <span className="text-[#1B4332]">Axes d'Intervention</span>
             </h1>
@@ -148,7 +148,7 @@ export default function ProgramsPage() {
             <div className="flex items-center gap-4 pt-2">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-[#012d1d] hover:bg-[#1B4332] text-white rounded-full font-bold text-sm shadow-xl hover:-translate-y-1 transition-all"
+                className="px-8 py-4 bg-[#0A2540] hover:bg-[#1B4332] text-white rounded-full font-bold text-sm shadow-xl hover-lift transition-all duration-300"
               >
                 Rejoindre une initiative
               </Link>
@@ -156,14 +156,14 @@ export default function ProgramsPage() {
           </div>
 
           <div className="relative flex justify-center">
-            <div className="relative w-full max-w-lg rounded-[40px] overflow-hidden shadow-2xl border-4 border-white/80 animate-float">
+            <div className="relative w-full max-w-lg rounded-[2.5rem] overflow-hidden shadow-[0_30px_60px_rgba(27,67,50,0.2)] border-4 border-white/80 animate-float">
               <img
                 src="/images/a_dynamic_floating_3d_composition_of_4_interconnected_glowing_spheres_or_screen.png"
                 alt="3D Strategic Molecule Visualization"
                 className="w-full h-auto object-cover drop-shadow-2xl"
               />
             </div>
-            <div className="absolute -top-10 -right-10 w-72 h-72 bg-[#1B4332]/10 rounded-full blur-3xl -z-10" />
+            <div className="absolute -top-10 -right-10 w-72 h-72 bg-[#daa520]/10 rounded-full blur-3xl -z-10" />
           </div>
 
         </div>
@@ -177,19 +177,19 @@ export default function ProgramsPage() {
           {pillars.map((pillar) => (
             <div
               key={pillar.id}
-              className="glass-panel p-6 sm:p-8 rounded-[36px] bg-white/90 border border-white/80 shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 group flex flex-col justify-between"
+              className="glass-panel p-6 sm:p-8 rounded-[2.5rem] bg-white/90 border border-white/50 shadow-glass hover:shadow-[0_20px_40px_rgba(27,67,50,0.1)] hover-lift transition-all duration-500 group flex flex-col justify-between"
             >
               <div>
                 {/* Image Container with Badge */}
-                <div className="relative h-64 sm:h-72 mb-6 rounded-[28px] overflow-hidden shadow-md">
+                <div className="relative h-64 sm:h-72 mb-6 rounded-[2rem] overflow-hidden shadow-md">
                   <img
                     src={pillar.image}
                     alt={pillar.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-[#0A2540]/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-700" />
                   
-                  <div className="absolute bottom-4 left-4">
+                  <div className="absolute bottom-4 left-4 z-10">
                     <span className={`px-4 py-1.5 rounded-full font-bold text-xs shadow-md ${pillar.badgeColor}`}>
                       {pillar.num}
                     </span>
@@ -199,14 +199,14 @@ export default function ProgramsPage() {
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-3">
                   {pillar.tags.map((tag, tIdx) => (
-                    <span key={tIdx} className={`text-xs font-bold ${pillar.textColor}`}>
+                    <span key={tIdx} className={`text-xs font-bold ${pillar.textColor} font-body tracking-wide`}>
                       {tag}
                     </span>
                   ))}
                 </div>
 
                 {/* Title & Description */}
-                <h3 className="font-headline font-bold text-2xl text-[#012d1d] mb-3 leading-snug">
+                <h3 className="font-headline font-extrabold text-2xl text-[#0A2540] mb-3 leading-snug">
                   {pillar.title}
                 </h3>
                 <p className="font-body text-sm text-[#414844] mb-6 leading-relaxed">
@@ -214,19 +214,18 @@ export default function ProgramsPage() {
                 </p>
               </div>
 
-              {/* Action */}
-              <div className="pt-4 border-t border-[#c1c8c2]/30 flex items-center justify-between">
+              {/* Action Buttons */}
+              <div className="pt-6 flex flex-wrap items-center gap-3">
                 <button
                   onClick={() => setSelectedProgram(pillar)}
-                  className={`flex items-center gap-2 font-bold text-sm ${pillar.textColor} hover:gap-3 transition-all`}
+                  className="flex items-center w-fit px-5 py-2.5 rounded-full bg-[#0A2540]/5 border border-[#0A2540]/10 text-[#0A2540] font-bold text-xs tracking-wider uppercase gap-2 hover:bg-[#0A2540] hover:text-white hover:gap-4 transition-all duration-500 shadow-sm"
                 >
-                  <span>En savoir plus</span>
-                  <ArrowRight className="w-4 h-4" />
+                  Détails <MoveRight className="w-4 h-4" />
                 </button>
 
                 <button
                   onClick={() => navigate('/contact')}
-                  className="px-4 py-2 bg-white border border-[#c1c8c2] hover:border-[#1B4332] text-[#012d1d] rounded-full text-xs font-semibold shadow-sm transition-all"
+                  className="flex items-center w-fit px-5 py-2.5 rounded-full bg-white border border-[#daa520]/30 text-[#daa520] font-bold text-xs tracking-wider uppercase gap-2 hover:bg-[#daa520] hover:text-white transition-all duration-500 shadow-sm"
                 >
                   Candidater
                 </button>
@@ -240,11 +239,12 @@ export default function ProgramsPage() {
       {/* 3. SPECIAL MODULE: ESPACES MUTUALISÉS & HÉBERGEMENTS */}
       {/* ============================================================ */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8 mb-20">
-        <div className="glass-panel p-8 sm:p-12 rounded-[40px] bg-gradient-to-r from-white via-white/90 to-[#f8f9fa] border-2 border-white/80 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+        <div className="glass-panel p-8 sm:p-12 rounded-[2.5rem] bg-gradient-to-r from-white via-white/90 to-[#f8f9fa] border border-[#1B4332]/10 shadow-glass flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden group hover:shadow-[0_20px_40px_rgba(27,67,50,0.1)] transition-all">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#daa520]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-[#daa520]/10 transition-colors" />
           
           <div className="relative z-10 max-w-2xl space-y-3">
-            <span className="text-[#1B4332] font-bold text-xs uppercase tracking-widest block">Infrastructures & Accueil</span>
-            <h2 className="font-headline font-extrabold text-3xl text-[#012d1d]">Espaces Mutualisés & Chambres d'Hôtes</h2>
+            <span className="text-[#daa520] font-bold text-xs uppercase tracking-widest block">Infrastructures & Accueil</span>
+            <h2 className="font-headline font-extrabold text-3xl text-[#0A2540]">Espaces Mutualisés & Chambres d'Hôtes</h2>
             <p className="font-body text-sm sm:text-base text-[#414844] leading-relaxed">
               Besoin d'un cadre professionnel pour vos formations, séminaires, assemblées générales ou séjours de travail ? Nos salles équipées à Thiès et nos chambres d'hôtes à Thiès et Saly sont à votre disposition.
             </p>
@@ -253,13 +253,13 @@ export default function ProgramsPage() {
           <div className="relative z-10 shrink-0 flex flex-col sm:flex-row gap-3">
             <button
               onClick={() => navigate('/contact')}
-              className="px-7 py-3.5 bg-[#012d1d] hover:bg-[#1B4332] text-white rounded-full font-bold text-xs sm:text-sm shadow-xl hover:-translate-y-1 transition-all"
+              className="px-7 py-3.5 bg-[#1B4332] hover:bg-[#122c21] text-white rounded-full font-bold text-xs sm:text-sm shadow-xl hover:-translate-y-1 transition-all"
             >
               Réserver une salle
             </button>
             <button
               onClick={() => navigate('/contact')}
-              className="px-7 py-3.5 bg-[#396093] hover:bg-[#1e4879] text-white rounded-full font-bold text-xs sm:text-sm shadow-xl hover:-translate-y-1 transition-all"
+              className="px-7 py-3.5 bg-[#daa520] hover:bg-[#b45309] text-white rounded-full font-bold text-xs sm:text-sm shadow-xl hover:-translate-y-1 transition-all"
             >
               Chambres d'hôtes
             </button>
@@ -270,17 +270,17 @@ export default function ProgramsPage() {
       {/* ============================================================ */}
       {/* 4. CTA BANNER */}
       {/* ============================================================ */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8 text-center py-12 relative">
-        <div className="max-w-3xl mx-auto space-y-6">
-          <h2 className="font-headline font-extrabold text-3xl sm:text-4xl text-[#012d1d]">
+      <section className="max-w-7xl mx-auto px-4 sm:px-8 text-center py-16 relative mb-12">
+        <div className="glass-panel max-w-4xl mx-auto p-12 rounded-[2.5rem] bg-white border border-[#0A2540]/10 shadow-glass space-y-6 hover:shadow-[0_20px_40px_rgba(27,67,50,0.1)] transition-all">
+          <h2 className="font-headline font-extrabold text-3xl sm:text-4xl text-[#0A2540]">
             Soutenez nos programmes prioritaires
           </h2>
-          <p className="font-body text-base text-[#414844] leading-relaxed">
+          <p className="font-body text-base text-[#414844] leading-relaxed max-w-2xl mx-auto">
             Chaque initiative est un pas vers une transformation durable. Devenez partenaire de notre vision et contribuez à amplifier notre impact.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-3 px-10 py-4 bg-[#D97706] hover:bg-[#b45309] text-white rounded-full font-bold text-sm shadow-2xl hover:scale-105 transition-all"
+            className="inline-flex items-center gap-3 px-10 py-4 bg-[#0A2540] hover:bg-[#1B4332] text-white rounded-full font-bold text-sm shadow-xl hover:scale-105 transition-all mt-4"
           >
             <span>Devenir Partenaire</span>
             <Rocket className="w-4 h-4" />
